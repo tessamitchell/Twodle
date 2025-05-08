@@ -5,8 +5,122 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Twodle"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
-        
+        <Grid Margin="30,30,30,200">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBox Name="One1" Grid.Row="0" Grid.Column="0" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="One2" Grid.Row="0" Grid.Column="1" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="One3" Grid.Row="0" Grid.Column="2" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="One4" Grid.Row="0" Grid.Column="3" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="One5" Grid.Row="0" Grid.Column="4" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Two1" Grid.Row="1" Grid.Column="0" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Two2" Grid.Row="1" Grid.Column="1" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Two3" Grid.Row="1" Grid.Column="2" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Two4" Grid.Row="1" Grid.Column="3" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Two5" Grid.Row="1" Grid.Column="4" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Three1" Grid.Row="2" Grid.Column="0" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Three2" Grid.Row="2" Grid.Column="1" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Three3" Grid.Row="2" Grid.Column="2" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Three4" Grid.Row="2" Grid.Column="3" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Three5" Grid.Row="2" Grid.Column="4" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Four1" Grid.Row="3" Grid.Column="0" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Four2" Grid.Row="3" Grid.Column="1" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Four3" Grid.Row="3" Grid.Column="2" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Four4" Grid.Row="3" Grid.Column="3" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Four5" Grid.Row="3" Grid.Column="4" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Five1" Grid.Row="4" Grid.Column="0" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Five2" Grid.Row="4" Grid.Column="1" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Five3" Grid.Row="4" Grid.Column="2" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Five4" Grid.Row="4" Grid.Column="3" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Five5" Grid.Row="4" Grid.Column="4" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Six1" Grid.Row="5" Grid.Column="0" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Six2" Grid.Row="5" Grid.Column="1" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Six3" Grid.Row="5" Grid.Column="2" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Six4" Grid.Row="5" Grid.Column="3" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Six5" Grid.Row="5" Grid.Column="4" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Seven1" Grid.Row="6" Grid.Column="0" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Seven2" Grid.Row="6" Grid.Column="1" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Seven3" Grid.Row="6" Grid.Column="2" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Seven4" Grid.Row="6" Grid.Column="3" Margin="2" IsEnabled="False"></TextBox>
+            <TextBox Name="Seven5" Grid.Row="6" Grid.Column="4" Margin="2" IsEnabled="False"></TextBox>
+        </Grid>
+        <Grid Margin="30,400,30,20" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!-- first row of keyboard -->
+            <Button Name="q" Grid.Row="0" Grid.Column="0" Margin="3" Content="Q"/>
+            <Button Name="w" Grid.Row="0" Grid.Column="1" Margin="3" Content="W"/>
+            <Button Name="e" Grid.Row="0" Grid.Column="2" Margin="3" Content="E"/>
+            <Button Name="r" Grid.Row="0" Grid.Column="3" Margin="3" Content="R"/>
+            <Button Name="t" Grid.Row="0" Grid.Column="4" Margin="3" Content="T"/>
+            <Button Name="y" Grid.Row="0" Grid.Column="5" Margin="3" Content="Y"/>
+            <Button Name="u" Grid.Row="0" Grid.Column="6" Margin="3" Content="U"/>
+            <Button Name="i" Grid.Row="0" Grid.Column="7" Margin="3" Content="I"/>
+            <Button Name="o" Grid.Row="0" Grid.Column="8" Margin="3" Content="O"/>
+            <Button Name="p" Grid.Row="0" Grid.Column="9" Margin="3" Content="P"/>
+            
+            <!-- second row of keyboard -->
+            <Button Name="a" Grid.Row="1" Grid.Column="0" Margin="3" Content="A"/>
+            <Button Name="s" Grid.Row="1" Grid.Column="1" Margin="3" Content="S"/>
+            <Button Name="d" Grid.Row="1" Grid.Column="2" Margin="3" Content="D"/>
+            <Button Name="f" Grid.Row="1" Grid.Column="3" Margin="3" Content="F"/>
+            <Button Name="g" Grid.Row="1" Grid.Column="4" Margin="3" Content="G"/>
+            <Button Name="h" Grid.Row="1" Grid.Column="5" Margin="3" Content="H"/>
+            <Button Name="j" Grid.Row="1" Grid.Column="6" Margin="3" Content="J"/>
+            <Button Name="k" Grid.Row="1" Grid.Column="7" Margin="3" Content="K"/>
+            <Button Name="l" Grid.Row="1" Grid.Column="8" Margin="3" Content="L"/>
+            
+            <!-- third row of keyboard -->
+            <Button Name="z" Grid.Row="2" Grid.Column="2" Margin="3" Content="Z"/>
+            <Button Name="x" Grid.Row="2" Grid.Column="3" Margin="3" Content="X"/>
+            <Button Name="c" Grid.Row="2" Grid.Column="4" Margin="3" Content="C"/>
+            <Button Name="v" Grid.Row="2" Grid.Column="5" Margin="3" Content="V"/>
+            <Button Name="b" Grid.Row="2" Grid.Column="6" Margin="3" Content="B"/>
+            <Button Name="n" Grid.Row="2" Grid.Column="7" Margin="3" Content="N"/>
+            <Button Name="m" Grid.Row="2" Grid.Column="8" Margin="3" Content="M"/>
+            
+            <!-- enter and delete-->
+            <Button Name="enter" Grid.Row="1" Grid.Column="9" Margin="3" Content="ENTER" Grid.RowSpan="2"/>
+            <Button Name="delete" Grid.Row="2" Grid.Column="0" Margin="3" Content="DELETE" Grid.ColumnSpan="2"/>
+            
+        </Grid>
     </Grid>
 </Window>
