@@ -1,0 +1,17 @@
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\bin\Debug\Twodle.exe.config
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\bin\Debug\Twodle.exe
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\bin\Debug\Twodle.pdb
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\obj\Debug\Twodle.csproj.AssemblyReference.cache
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\obj\Debug\MainWindow.g.cs
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\obj\Debug\App.g.cs
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\obj\Debug\Twodle_MarkupCompile.cache
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\obj\Debug\Twodle_MarkupCompile.lref
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\obj\Debug\MainWindow.baml
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\obj\Debug\Twodle.g.resources
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\obj\Debug\Twodle.Properties.Resources.resources
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\obj\Debug\Twodle.csproj.GenerateResource.cache
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\obj\Debug\Twodle.csproj.CoreCompileInputs.cache
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\obj\Debug\Twodle.exe
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\obj\Debug\Twodle.pdb
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\obj\Debug\Start.g.cs
+C:\Users\tessa\OneDrive - University of Missouri\Desktop\it4400\Twodle\Twodle\obj\Debug\Start.baml

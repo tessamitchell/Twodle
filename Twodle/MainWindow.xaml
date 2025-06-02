@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Twodle"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
+        Title="MainWindow" Height="600" Width="800"
+        KeyDown="Window_KeyDown"
+        >
     <Grid>
+        <CheckBox Name="ehMode" Margin="670,05,30,535" Content="Hard mode" IsChecked="False" />
         <Grid Margin="30,30,30,200">
+            <!-- Define the Grid Rows and Columns for the game boards -->
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -16,7 +20,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-                
+
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -31,42 +35,82 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBox Name="One1" Grid.Row="0" Grid.Column="0" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="One2" Grid.Row="0" Grid.Column="1" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="One3" Grid.Row="0" Grid.Column="2" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="One4" Grid.Row="0" Grid.Column="3" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="One5" Grid.Row="0" Grid.Column="4" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Two1" Grid.Row="1" Grid.Column="0" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Two2" Grid.Row="1" Grid.Column="1" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Two3" Grid.Row="1" Grid.Column="2" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Two4" Grid.Row="1" Grid.Column="3" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Two5" Grid.Row="1" Grid.Column="4" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Three1" Grid.Row="2" Grid.Column="0" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Three2" Grid.Row="2" Grid.Column="1" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Three3" Grid.Row="2" Grid.Column="2" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Three4" Grid.Row="2" Grid.Column="3" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Three5" Grid.Row="2" Grid.Column="4" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Four1" Grid.Row="3" Grid.Column="0" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Four2" Grid.Row="3" Grid.Column="1" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Four3" Grid.Row="3" Grid.Column="2" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Four4" Grid.Row="3" Grid.Column="3" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Four5" Grid.Row="3" Grid.Column="4" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Five1" Grid.Row="4" Grid.Column="0" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Five2" Grid.Row="4" Grid.Column="1" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Five3" Grid.Row="4" Grid.Column="2" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Five4" Grid.Row="4" Grid.Column="3" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Five5" Grid.Row="4" Grid.Column="4" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Six1" Grid.Row="5" Grid.Column="0" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Six2" Grid.Row="5" Grid.Column="1" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Six3" Grid.Row="5" Grid.Column="2" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Six4" Grid.Row="5" Grid.Column="3" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Six5" Grid.Row="5" Grid.Column="4" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Seven1" Grid.Row="6" Grid.Column="0" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Seven2" Grid.Row="6" Grid.Column="1" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Seven3" Grid.Row="6" Grid.Column="2" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Seven4" Grid.Row="6" Grid.Column="3" Margin="2" IsEnabled="False"></TextBox>
-            <TextBox Name="Seven5" Grid.Row="6" Grid.Column="4" Margin="2" IsEnabled="False"></TextBox>
+            <!-- Define the TexsBoxes for the first game Board -->
+            <TextBox Name="One1" Grid.Row="0" Grid.Column="0" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="One2" Grid.Row="0" Grid.Column="1" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="One3" Grid.Row="0" Grid.Column="2" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="One4" Grid.Row="0" Grid.Column="3" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="One5" Grid.Row="0" Grid.Column="4" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Two1" Grid.Row="1" Grid.Column="0" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Two2" Grid.Row="1" Grid.Column="1" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Two3" Grid.Row="1" Grid.Column="2" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Two4" Grid.Row="1" Grid.Column="3" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Two5" Grid.Row="1" Grid.Column="4" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Three1" Grid.Row="2" Grid.Column="0" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Three2" Grid.Row="2" Grid.Column="1" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Three3" Grid.Row="2" Grid.Column="2" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Three4" Grid.Row="2" Grid.Column="3" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Three5" Grid.Row="2" Grid.Column="4" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Four1" Grid.Row="3" Grid.Column="0" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Four2" Grid.Row="3" Grid.Column="1" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Four3" Grid.Row="3" Grid.Column="2" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Four4" Grid.Row="3" Grid.Column="3" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Four5" Grid.Row="3" Grid.Column="4" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Five1" Grid.Row="4" Grid.Column="0" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Five2" Grid.Row="4" Grid.Column="1" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Five3" Grid.Row="4" Grid.Column="2" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Five4" Grid.Row="4" Grid.Column="3" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Five5" Grid.Row="4" Grid.Column="4" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Six1" Grid.Row="5" Grid.Column="0" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Six2" Grid.Row="5" Grid.Column="1" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Six3" Grid.Row="5" Grid.Column="2" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Six4" Grid.Row="5" Grid.Column="3" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Six5" Grid.Row="5" Grid.Column="4" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Seven1" Grid.Row="6" Grid.Column="0" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Seven2" Grid.Row="6" Grid.Column="1" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Seven3" Grid.Row="6" Grid.Column="2" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Seven4" Grid.Row="6" Grid.Column="3" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Seven5" Grid.Row="6" Grid.Column="4" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+            <!-- Define the TextBoxes for the second game board -->
+            <TextBox Name="One1_2" Grid.Row="0" Grid.Column="6" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="One2_2" Grid.Row="0" Grid.Column="7" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="One3_2" Grid.Row="0" Grid.Column="8" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="One4_2" Grid.Row="0" Grid.Column="9" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="One5_2" Grid.Row="0" Grid.Column="10" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Two1_2" Grid.Row="1" Grid.Column="6" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Two2_2" Grid.Row="1" Grid.Column="7" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Two3_2" Grid.Row="1" Grid.Column="8" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Two4_2" Grid.Row="1" Grid.Column="9" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Two5_2" Grid.Row="1" Grid.Column="10" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Three1_2" Grid.Row="2" Grid.Column="6" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Three2_2" Grid.Row="2" Grid.Column="7" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Three3_2" Grid.Row="2" Grid.Column="8" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Three4_2" Grid.Row="2" Grid.Column="9" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Three5_2" Grid.Row="2" Grid.Column="10" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Four1_2" Grid.Row="3" Grid.Column="6" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Four2_2" Grid.Row="3" Grid.Column="7" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Four3_2" Grid.Row="3" Grid.Column="8" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Four4_2" Grid.Row="3" Grid.Column="9" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Four5_2" Grid.Row="3" Grid.Column="10" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Five1_2" Grid.Row="4" Grid.Column="6" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Five2_2" Grid.Row="4" Grid.Column="7" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Five3_2" Grid.Row="4" Grid.Column="8" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Five4_2" Grid.Row="4" Grid.Column="9" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Five5_2" Grid.Row="4" Grid.Column="10" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Six1_2" Grid.Row="5" Grid.Column="6" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Six2_2" Grid.Row="5" Grid.Column="7" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Six3_2" Grid.Row="5" Grid.Column="8" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Six4_2" Grid.Row="5" Grid.Column="9" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Six5_2" Grid.Row="5" Grid.Column="10" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Seven1_2" Grid.Row="6" Grid.Column="6" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Seven2_2" Grid.Row="6" Grid.Column="7" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Seven3_2" Grid.Row="6" Grid.Column="8" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Seven4_2" Grid.Row="6" Grid.Column="9" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="Seven5_2" Grid.Row="6" Grid.Column="10" Margin="2" IsEnabled="False" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         </Grid>
+        
+        <!-- Define the Keyboard on the game screen -->
         <Grid Margin="30,400,30,20" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -86,41 +130,41 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <!-- first row of keyboard -->
-            <Button Name="q" Grid.Row="0" Grid.Column="0" Margin="3" Content="Q"/>
-            <Button Name="w" Grid.Row="0" Grid.Column="1" Margin="3" Content="W"/>
-            <Button Name="e" Grid.Row="0" Grid.Column="2" Margin="3" Content="E"/>
-            <Button Name="r" Grid.Row="0" Grid.Column="3" Margin="3" Content="R"/>
-            <Button Name="t" Grid.Row="0" Grid.Column="4" Margin="3" Content="T"/>
-            <Button Name="y" Grid.Row="0" Grid.Column="5" Margin="3" Content="Y"/>
-            <Button Name="u" Grid.Row="0" Grid.Column="6" Margin="3" Content="U"/>
-            <Button Name="i" Grid.Row="0" Grid.Column="7" Margin="3" Content="I"/>
-            <Button Name="o" Grid.Row="0" Grid.Column="8" Margin="3" Content="O"/>
-            <Button Name="p" Grid.Row="0" Grid.Column="9" Margin="3" Content="P"/>
-            
+            <Button Name="q" Grid.Row="0" Grid.Column="0" Margin="3" Content="Q" Click="letterClick" Focusable="False"/>
+            <Button Name="w" Grid.Row="0" Grid.Column="1" Margin="3" Content="W" Click="letterClick" Focusable="False"/>
+            <Button Name="e" Grid.Row="0" Grid.Column="2" Margin="3" Content="E" Click="letterClick" Focusable="False"/>
+            <Button Name="r" Grid.Row="0" Grid.Column="3" Margin="3" Content="R" Click="letterClick" Focusable="False"/>
+            <Button Name="t" Grid.Row="0" Grid.Column="4" Margin="3" Content="T" Click="letterClick" Focusable="False"/>
+            <Button Name="y" Grid.Row="0" Grid.Column="5" Margin="3" Content="Y" Click="letterClick" Focusable="False"/>
+            <Button Name="u" Grid.Row="0" Grid.Column="6" Margin="3" Content="U" Click="letterClick" Focusable="False"/>
+            <Button Name="i" Grid.Row="0" Grid.Column="7" Margin="3" Content="I" Click="letterClick" Focusable="False"/>
+            <Button Name="o" Grid.Row="0" Grid.Column="8" Margin="3" Content="O" Click="letterClick" Focusable="False"/>
+            <Button Name="p" Grid.Row="0" Grid.Column="9" Margin="3" Content="P" Click="letterClick" Focusable="False"/>
+
             <!-- second row of keyboard -->
-            <Button Name="a" Grid.Row="1" Grid.Column="0" Margin="3" Content="A"/>
-            <Button Name="s" Grid.Row="1" Grid.Column="1" Margin="3" Content="S"/>
-            <Button Name="d" Grid.Row="1" Grid.Column="2" Margin="3" Content="D"/>
-            <Button Name="f" Grid.Row="1" Grid.Column="3" Margin="3" Content="F"/>
-            <Button Name="g" Grid.Row="1" Grid.Column="4" Margin="3" Content="G"/>
-            <Button Name="h" Grid.Row="1" Grid.Column="5" Margin="3" Content="H"/>
-            <Button Name="j" Grid.Row="1" Grid.Column="6" Margin="3" Content="J"/>
-            <Button Name="k" Grid.Row="1" Grid.Column="7" Margin="3" Content="K"/>
-            <Button Name="l" Grid.Row="1" Grid.Column="8" Margin="3" Content="L"/>
-            
+            <Button Name="a" Grid.Row="1" Grid.Column="0" Margin="3" Content="A" Click="letterClick" Focusable="False"/>
+            <Button Name="s" Grid.Row="1" Grid.Column="1" Margin="3" Content="S" Click="letterClick" Focusable="False"/>
+            <Button Name="d" Grid.Row="1" Grid.Column="2" Margin="3" Content="D" Click="letterClick" Focusable="False"/>
+            <Button Name="f" Grid.Row="1" Grid.Column="3" Margin="3" Content="F" Click="letterClick" Focusable="False"/>
+            <Button Name="g" Grid.Row="1" Grid.Column="4" Margin="3" Content="G" Click="letterClick" Focusable="False"/>
+            <Button Name="h" Grid.Row="1" Grid.Column="5" Margin="3" Content="H" Click="letterClick" Focusable="False"/>
+            <Button Name="j" Grid.Row="1" Grid.Column="6" Margin="3" Content="J" Click="letterClick" Focusable="False"/>
+            <Button Name="k" Grid.Row="1" Grid.Column="7" Margin="3" Content="K" Click="letterClick" Focusable="False"/>
+            <Button Name="l" Grid.Row="1" Grid.Column="8" Margin="3" Content="L" Click="letterClick" Focusable="False"/>
+
             <!-- third row of keyboard -->
-            <Button Name="z" Grid.Row="2" Grid.Column="2" Margin="3" Content="Z"/>
-            <Button Name="x" Grid.Row="2" Grid.Column="3" Margin="3" Content="X"/>
-            <Button Name="c" Grid.Row="2" Grid.Column="4" Margin="3" Content="C"/>
-            <Button Name="v" Grid.Row="2" Grid.Column="5" Margin="3" Content="V"/>
-            <Button Name="b" Grid.Row="2" Grid.Column="6" Margin="3" Content="B"/>
-            <Button Name="n" Grid.Row="2" Grid.Column="7" Margin="3" Content="N"/>
-            <Button Name="m" Grid.Row="2" Grid.Column="8" Margin="3" Content="M"/>
-            
-            <!-- enter and delete-->
-            <Button Name="enter" Grid.Row="1" Grid.Column="9" Margin="3" Content="ENTER" Grid.RowSpan="2"/>
-            <Button Name="delete" Grid.Row="2" Grid.Column="0" Margin="3" Content="DELETE" Grid.ColumnSpan="2"/>
-            
+            <Button Name="z" Grid.Row="2" Grid.Column="2" Margin="3" Content="Z" Click="letterClick" Focusable="False"/>
+            <Button Name="x" Grid.Row="2" Grid.Column="3" Margin="3" Content="X" Click="letterClick" Focusable="False"/>
+            <Button Name="c" Grid.Row="2" Grid.Column="4" Margin="3" Content="C" Click="letterClick" Focusable="False"/>
+            <Button Name="v" Grid.Row="2" Grid.Column="5" Margin="3" Content="V" Click="letterClick" Focusable="False"/>
+            <Button Name="b" Grid.Row="2" Grid.Column="6" Margin="3" Content="B" Click="letterClick" Focusable="False"/>
+            <Button Name="n" Grid.Row="2" Grid.Column="7" Margin="3" Content="N" Click="letterClick" Focusable="False"/>
+            <Button Name="m" Grid.Row="2" Grid.Column="8" Margin="3" Content="M" Click="letterClick" Focusable="False"/>
+
+            <!-- enter and delete -->
+            <Button Name="enter" Grid.Row="1" Grid.Column="9" Margin="3" Content="ENTER" Grid.RowSpan="2" Click="enter_Click"/>
+            <Button Name="back" Grid.Row="2" Grid.Column="0" Margin="3" Content="DELETE" Grid.ColumnSpan="2" Click="delete_Click" Focusable="False"/>
+
         </Grid>
     </Grid>
 </Window>
